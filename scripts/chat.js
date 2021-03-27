@@ -37,6 +37,7 @@ class Chatroom {
     updateRoom(room){
         this.room = room;
         console.log('room updated')
+        if(this.unsub)
         this.unsub()
     }
 }
@@ -47,6 +48,15 @@ chatroom.getChats((data) => {
     console.log(data)
 })
 
-chatroom.updateRoom('javascript')
+setTimeout(() => {
+    chatroom.updateRoom('crypto')
+    chatroom.updateName('ash')
+    chatroom.getChats((data) => {
+        console.log(data)
+    })
+    chatroom.addChat("hello")
+}, 3000)
 
-chatroom.addChat("hello this is a test").then(() => console.log("success")).catch(err => console.log("Houston we have a problem"))
+// chatroom.updateRoom('javascript')
+
+// chatroom.addChat("hello this is a test").then(() => console.log("success")).catch(err => console.log("Houston we have a problem"))
