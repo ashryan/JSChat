@@ -17,13 +17,42 @@
     <div class="container my-4">
       <h1 class="my-4 text-center">JSChat</h1>
 
-      <div class="my-2">Choose a room:</div>
-      <button class="btn" id="general">#general</button>
-      <button class="btn" id="crypto">#crypto</button>
-      <button class="btn" id="javascript">#javascript</button>
-      <button class="btn" id="csharp">C#</button>
+      <div class="chat-rooms mb-3 text-center">
+        <div class="my-2">Choose a room:</div>
+        <button class="btn" id="general">#general</button>
+        <button class="btn" id="crypto">#crypto</button>
+        <button class="btn" id="javascript">#javascript</button>
+        <button class="btn" id="csharp">#C-Sharp</button>
+      </div>
+
+      <div class="chat-window"></div>
+      <ul class="chat-list list-group"></ul>
     </div>
 
+    <form class="new-chat my-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Your message:</div>
+        </div>
+        <input type="text" id="message" class="form-control" required />
+        <div class="input-group-append">
+          <input type="submit" class="btn" value="send" />
+        </div>
+      </div>
+    </form>
+
+    <form class="new-name my-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Update name:</div>
+        </div>
+        <input type="text" id="name" class="form-control" required />
+        <div class="input-group-append">
+          <input type="submit" class="btn" value="update" />
+        </div>
+      </div>
+      <div class="update-mssg"></div>
+    </form>
     <script src="scripts/chat.js"></script>
     <script src="scripts/ui.js"></script>
     <script src="scripts/app.js"></script>
