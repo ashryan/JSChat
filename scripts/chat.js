@@ -42,21 +42,6 @@ class Chatroom {
     }
 }
 
-const chatroom = new Chatroom('crypto', 'ash')
 
-chatroom.getChats((data) => {
-    console.log(data)
-})
 
-setTimeout(() => {
-    chatroom.updateRoom('crypto')
-    chatroom.updateName('ash')
-    chatroom.getChats((data) => {
-        console.log(data)
-    })
-    chatroom.addChat("hello")
-}, 3000)
 
-// chatroom.updateRoom('javascript')
-
-// chatroom.addChat("hello this is a test").then(() => console.log("success")).catch(err => console.log("Houston we have a problem"))
