@@ -59,8 +59,33 @@
       <div class="update-mssg"></div>
     </form>
 
-    <script src="scripts/chat.js"></script>
-    <script src="scripts/ui.js"></script>
-    <script src="scripts/app.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBtErN69hYmViXR7XQCLa8zjunyPOsSvgo",
+        authDomain: "jschat-b3bef.firebaseapp.com",
+        projectId: "jschat-b3bef",
+        storageBucket: "jschat-b3bef.appspot.com",
+        messagingSenderId: "534785487665",
+        appId: "1:534785487665:web:fe04f933fcbeca6d43f610",
+      };
+      // Initialise Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      const db = firebase.firestore();
+    </script>
+
+    <script src="scripts/chat.js">
+      type="module"
+    </script>
+    <script src="scripts/ui.js">
+      type="module"
+    </script>
+    <script src="scripts/app.js" type="module"></script>
   </body>
 </html>
