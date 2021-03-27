@@ -40,7 +40,7 @@ const username = localStorage.username ? localStorage.username : 'anon'
 
 const chatUI = new ChatUI(chatList)
 
-const chatroom = new Chatroom('crypto', username)
+const chatroom = new Chatroom('general', username)
 
 chatroom.getChats((data) => {
     chatUI.render(data)
