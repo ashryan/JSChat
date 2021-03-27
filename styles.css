@@ -12,3 +12,7 @@
 .btn:focus {
   outline: none;
 }
+
+.chat-text {
+    max-width: 1000px;
+}
